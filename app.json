@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "GClock",
+    "slug": "gclock",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#F4F3EC"
+    },
+    "ios": {
+      "bundleIdentifier": "com.happy.gclock",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.happy.gclock",
+      "adaptiveIcon": {
+        "backgroundColor": "#F4F3EC"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      [
+        "expo-widgets",
+        {
+          "enableAndroid": true,
+          "widgets": [
+            {
+              "name": "GClockWidget",
+              "displayName": "GClock",
+              "description": "A transparent local clock with googly eyes at midnight.",
+              "ios": {
+                "supportedFamilies": ["systemSmall", "systemMedium"],
+                "contentMarginsDisabled": true,
+                "initialLayout": "./widgets/GClockWidget.ios.tsx"
+              },
+              "android": {
+                "targetCellWidth": 3,
+                "targetCellHeight": 2,
+                "minWidth": 180,
+                "minHeight": 110,
+                "resizeMode": "horizontal",
+                "initialLayout": "./widgets/GClockWidget.android.tsx"
+              }
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}
